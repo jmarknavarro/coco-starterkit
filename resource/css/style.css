@@ -1,0 +1,402 @@
+
+* {
+  box-sizing: border-box
+} 
+:root {
+  --primary: #f04e98;
+  --secondary: #fff0e6;
+  --light: #f8f8f9;
+  --dark: #001d23;
+  --darker: #0d0e19;
+}
+
+.back-to-top {
+  position: fixed;
+  display: none;
+  right: 30px;
+  bottom: 30px;
+  z-index: 99;
+}
+
+.ceucolor {
+  color: #f04e98;
+}
+
+
+.bg-light{
+  background-color: #f4f4f4;
+}
+
+
+body {
+  
+  font-family: 'Montserrat', sans-serif;
+  background-image: url(../img/ceubg.jpg);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* background-color: var(--darker); */
+  
+}
+
+a{
+  text-decoration: none!important;
+  color: #5c5c5c;
+} 
+a:hover{
+  color: #4e4e4e;
+}
+
+
+/* ====================================================== */
+/* ======================= BUTTON ======================= */
+/* ====================================================== */
+.btn {
+transition: 0.3s;
+font-size: 15px;
+}
+
+.btn:hover {
+  transition: 0.3s;
+transform: scale(1);
+color: #f04e98;
+}
+
+.btn-square {
+  width: 38px;
+  height: 38px;
+}
+
+.btn-sm-square {
+  width: 32px;
+  height: 32px;
+}
+
+.btn-lg-square {
+  width: 48px;
+  height: 48px;
+}
+
+.btn-square,
+.btn-sm-square,
+.btn-lg-square {
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: normal;
+}
+
+.btn-primary {
+  border: 1px solid #ffffff;
+  border-radius: 10px;
+  text-decoration: none;
+  margin-right: 15px;
+  background-color: transparent;
+  color: #ffffff;
+}
+.btn-primary:hover {
+  border: 1px solid transparent;
+  background-color: #f22784;
+  color: #fff;
+}
+
+.btn-rpink {
+  border-radius: 30px;
+  text-decoration: none;
+  background-color: #ffffff;
+  font-weight: 600;
+  text-align: center;
+  color: #000000;
+  height: 3rem;
+  width: 15rem;
+  line-height: 36px;
+}
+.btn-rpink:hover {
+  background-color: #cfcfcf;
+  color: #000;
+  scale: 1.05;
+
+}
+
+.btn-pink {
+  border: 1px solid #251f70;
+  border-radius: 5px;
+  text-decoration: none;
+  margin-right: 15px;
+  background-color: transparent;
+  color: #251f70;
+}
+.btn-pink:hover {
+  border: 1px solid transparent;
+  background-color: #f22784;
+  color: #fff;
+}
+
+.btn-blue {
+  background-color: #251f70;
+  color: #fff;
+  border-radius: 5px;
+  text-decoration: none;
+  margin-right: 15px;
+}
+.btn-blue:hover {
+  background-color: #1e1a5a;
+  color: #fff;
+}
+
+
+.btn-check:focus + {
+  color: #000;
+  background-color: #f22784;
+  border-color: #f04e98;
+  box-shadow: 0 0 0 0.25rem rgba(217, 94, 13, 0.5);
+}
+
+.btn-form{
+  font-size: 14px;
+font-weight: 400;
+}
+
+.btn-link{
+  font-family: 'Rubik', sans-serif;
+  color: #5c5c5c;
+  transition: 0.5s;
+}.btn-link:hover{
+  color: #4e4e4e;
+  scale: 1.02;
+  transition: 0.5s;
+}
+
+/* ====================================================== */
+/* ======================== INPUT ======================= */
+/* ====================================================== */
+
+input[type="text"],input[type="email"],input[type="password"],
+select.form-control {
+  /* border: none;
+  border-bottom: 1px solid #263f6d; */
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  transition: 0.5s;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,input[type="password"]:focus,
+select.form-control:focus {
+  -webkit-box-shadow: none;
+  border-color: #cecece;
+  box-shadow:  5px 5px 10px #dedede,
+  -5px -5px 10px #ffffff;
+             transition: 0.5s;
+
+}
+
+
+/* ====================================================== */
+/* ======================= NAVBAR ======================= */
+/* ====================================================== */ 
+.fixed-top {
+  transition: 0.5s;
+}
+
+.top-bar {
+  height: 45px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.bg-nav {
+  background-color: #0000002f;
+  backdrop-filter: blur(5px)
+}
+
+.navbar .dropdown-toggle::after {
+  border: none;
+  content: "\f107";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  vertical-align: middle;
+  margin-left: 8px;
+}
+
+.navbar .navbar-nav .nav-link {
+  margin-right: 30px;
+  padding: 25px 0;
+  color: #ffffff;
+  font-weight: 500;
+  outline: none;
+}
+
+.navbar .navbar-nav .nav-link:hover,
+.navbar .navbar-nav .nav-link.active {
+  color: var(--primary);
+}
+
+@media (max-width: 991.98px) {
+ 
+  .navbar .navbar-nav .nav-link {
+    padding: 10px 0;
+  }
+}
+
+@media (min-width: 992px) {
+  .navbar .nav-item .dropdown-menu {
+    display: block;
+    visibility: hidden;
+    top: 100%;
+    transform: rotateX(-75deg);
+    transform-origin: 0% 0%;
+    transition: 0.5s;
+    opacity: 0;
+  }
+
+  .navbar .nav-item:hover .dropdown-menu {
+    transform: rotateX(0deg);
+    visibility: visible;
+    transition: 0.5s;
+    opacity: 1;
+  }
+}
+
+.navbar-dark .navbar-toggler{
+  border: 0;
+}
+.navbar-dark .navbar-toggler:focus, .navbar-toggler:hover{
+  border: 0;
+}
+
+.navbar-nav { 
+  flex-direction: row;
+}
+/* ====================================================== */
+/* ====================== FRONTPAGE ===================== */
+/* ====================================================== */
+.landing {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  /* background: #241f70b2; */
+  margin-top: 8%;
+  z-index: 1;
+  
+}
+
+.titlelanding {
+  font-weight: 400;
+  font-size: 35px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  cursor: default;
+}
+
+.titlelanding-top{
+  font-size: 19px;
+  cursor: default;
+}
+
+.bottomline {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.135);
+}
+
+
+@media (max-width: 600px) {
+  .landing{
+    margin-top: 10%;
+  }
+  .titlelanding-top{
+    font-size: 1rem;
+    margin-bottom: 30px;
+    text-align:center;
+  }
+
+  .titlelanding{
+    font-size: 2rem;
+  }
+  .coco-logo{
+    height: auto;
+    width: 300px;
+  }
+}
+/* ====================================================== */
+/* ======================== LOGIN ======================= */
+/* ====================================================== */
+
+
+.form-main {
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .h-md-100 { height: 100vh; }
+  .logo {
+    margin: 0 3%;
+  }
+  .tagline h1{
+    font-size: 60px;
+  }
+}
+
+.loginlogo {
+  margin-left: 10px;
+}
+
+.info{
+  margin-bottom: 4%
+}
+
+.tagline{
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+.tagline h1{
+  font-weight:100;
+  color: #fff;
+  font-size: 60px;
+  user-select:none;
+}
+.tagline h1>span{
+  font-weight: 600;
+}
+
+.loginbox{
+  background-color: #fff;
+  min-height: 100vh;
+
+}
+
+/* When I remove background the icon goes back to that default size */
+.custom-control-input:checked ~ .custom-control-label::before {
+  background-color: #251f70 !important;
+}
+
+.loginform{
+  width: 80%;
+  padding: 4%;
+  margin: 0 auto;
+}
+
+.m-title{
+  padding-top: 40px;
+  color: #251f70;
+  font-weight: 500;
+  user-select:none;
+  font-size: 30px;
+
+}
+
+.m-title>span{
+  font-weight: 400;
+  font-size: 20px;
+  color: #444;
+}
+
+.p-title{
+  font-weight: 500;
+  font-size: 15px;
+  margin-bottom: 24px;
+  user-select:none;
+  color: #444;
+}
+
+
