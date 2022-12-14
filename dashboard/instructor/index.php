@@ -1,5 +1,5 @@
 <?php
-require_once $_SERVER['DOCUMENT_ROOT'] . '/coco/init/class/core/init.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/coco-starterkit/init/class/core/init.php';
 isLogin();
 $user = new user();
 isInstructor($user->data()->groups);
@@ -14,12 +14,12 @@ $view = new view();
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="icon" type="image/png" sizes="16x16" href="/coco/resource/img/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="/coco-starterkit/resource/img/favicon.ico">
     <title>Dashboard</title>
     <!-- Custom CSS -->
-    <link href="/coco/vendor/c3/c3.min.css" rel="stylesheet">
-    <link href="/coco/vendor/jvector/jquery-jvectormap-2.0.2.css" rel="stylesheet" />
-    <link href="/coco/resource/css/style.min.css" rel="stylesheet">
+    <link href="/coco-starterkit/vendor/c3/c3.min.css" rel="stylesheet">
+    <link href="/coco-starterkit/vendor/jvector/jquery-jvectormap-2.0.2.css" rel="stylesheet" />
+    <link href="/coco-starterkit/resource/css/style.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css"
         href="https://cdn.datatables.net/v/bs4/dt-1.12.1/r-2.3.0/sc-2.0.7/sp-2.0.2/datatables.min.css" />
     <!-- Fonts -->
@@ -396,15 +396,15 @@ $view = new view();
     <?php require 'modal/cogp_approval_details.php';?>
     <?php require 'modal/ccg_approval_details.php';?>
 
-    <script src="/coco/vendor/jquery/dist/jquery.min.js"></script>
-    <script src="/coco/vendor/popper.js/dist/umd/popper.min.js"></script>
-    <script src="/coco/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="/coco/resource/js/app-style-switcher.js"></script>
-    <script src="/coco/resource/js/feather.min.js"></script>
-    <script src="/coco/resource/js/sidebarmenu.js"></script>
-    <script src="/coco/resource/js/app.js"></script>
-    <script src="/coco/vendor/perfect-scrollbar/dist/perfect-scrollbar.jquery.min.js"></script>
-    <script src="/coco/resource/js/custom.min.js"></script>
+    <script src="/coco-starterkit/vendor/jquery/dist/jquery.min.js"></script>
+    <script src="/coco-starterkit/vendor/popper.js/dist/umd/popper.min.js"></script>
+    <script src="/coco-starterkit/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="/coco-starterkit/resource/js/app-style-switcher.js"></script>
+    <script src="/coco-starterkit/resource/js/feather.min.js"></script>
+    <script src="/coco-starterkit/resource/js/sidebarmenu.js"></script>
+    <script src="/coco-starterkit/resource/js/app.js"></script>
+    <script src="/coco-starterkit/vendor/perfect-scrollbar/dist/perfect-scrollbar.jquery.min.js"></script>
+    <script src="/coco-starterkit/resource/js/custom.min.js"></script>
     <script type="text/javascript"
         src="https://cdn.datatables.net/v/bs4/dt-1.12.1/r-2.3.0/sc-2.0.7/sp-2.0.2/datatables.min.js"></script>
     </script>

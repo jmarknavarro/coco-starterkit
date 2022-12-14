@@ -1,5 +1,5 @@
 <?php
-require_once $_SERVER['DOCUMENT_ROOT'] . '/coco/init/class/core/init.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/coco-starterkit/init/class/core/init.php';
 isLogin();
 $user = new user();
 isInstructor($user->data()->groups);
@@ -12,12 +12,12 @@ $view = new view();
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="icon" type="image/png" sizes="16x16" href="/coco/resource/img/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="/coco-starterkit/resource/img/favicon.ico">
     <title>New Transaction</title>
     <!-- Custom CSS -->
-    <link href="/coco/vendor/c3/c3.min.css" rel="stylesheet">
-    <link href="/coco/vendor/jvector/jquery-jvectormap-2.0.2.css" rel="stylesheet" />
-    <link href="/coco/resource/css/style.min.css" rel="stylesheet">
+    <link href="/coco-starterkit/vendor/c3/c3.min.css" rel="stylesheet">
+    <link href="/coco-starterkit/vendor/jvector/jquery-jvectormap-2.0.2.css" rel="stylesheet" />
+    <link href="/coco-starterkit/resource/css/style.min.css" rel="stylesheet">
      <!-- Fonts -->
      <link rel="stylesheet" href="https://use.typekit.net/ygc5xtx.css">
 </head>
@@ -41,7 +41,7 @@ $view = new view();
                 <nav class="sidebar-nav">
                     <ul id="sidebarnav">
 
-                        <li class="sidebar-item "> <a class="sidebar-link " href="/coco/dashboard/instructor/"
+                        <li class="sidebar-item "> <a class="sidebar-link " href="/coco-starterkit/dashboard/instructor/"
                                 aria-expanded="false"><i data-feather="home" class="feather-icon"></i><span
                                     class="hide-menu">Dashboard</span></a></li>
                         <li class="list-divider"></li>
@@ -52,18 +52,18 @@ $view = new view();
                                 aria-expanded="false"><i data-feather="file-text" class="feather-icon"></i><span
                                     class="hide-menu">My Request</span></a>
                             <ul aria-expanded="false" class="collapse  first-level base-level-line in">
-                                <li class="sidebar-item active"><a href="/coco/dashboard/instructor/cog"
+                                <li class="sidebar-item active"><a href="/coco-starterkit/dashboard/instructor/cog"
                                         class="sidebar-link active"><span class="hide-menu">
                                         Completion Grades <br> Within the Semester
                                         </span></a>
                                 </li>
 
-                                <li class="sidebar-item"><a href="/coco/dashboard/instructor/cogp/"
+                                <li class="sidebar-item"><a href="/coco-starterkit/dashboard/instructor/cogp/"
                                         class="sidebar-link">
                                         <span class="hide-menu">Completion of Grades <br> (Previous Semester)</span>
                                     </a>
                                 </li>
-                                <li class="sidebar-item"><a href="/coco/dashboard/instructor/ccg/"
+                                <li class="sidebar-item"><a href="/coco-starterkit/dashboard/instructor/ccg/"
                                         class="sidebar-link"><span class="hide-menu">
                                         Change/Correction<br> of Grades
                                         </span></a>
@@ -73,13 +73,13 @@ $view = new view();
                         </li>
 
                         <li class="sidebar-item"> <a class="sidebar-link sidebar-link"
-                                href="/coco/dashboard/instructor/logs" aria-expanded="false"><i
+                                href="/coco-starterkit/dashboard/instructor/logs" aria-expanded="false"><i
                                     data-feather="bar-chart-2" class="feather-icon"></i><span
                                     class="hide-menu">Logs</span></a></li>
 
                         <li class="list-divider"></li>
 
-                        <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="/coco/logout"
+                        <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="/coco-starterkit/logout"
                                 aria-expanded="false"><i data-feather="log-out" class="feather-icon"></i><span
                                     class="hide-menu">Logout</span></a></li>
                     </ul>
@@ -96,7 +96,7 @@ $view = new view();
                         <div class="d-flex align-items-center">
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb m-0 p-0">
-                                    <li class="breadcrumb-item"><a href="/coco/dashboard/instructor/cog/"
+                                    <li class="breadcrumb-item"><a href="/coco-starterkit/dashboard/instructor/cog/"
                                             class="text-muted">Transaction List</a>
                                     </li>
                                     <li class="breadcrumb-item text-muted active" aria-current="page">New Transaction
@@ -206,7 +206,7 @@ $view = new view();
                                             <input type="button" name="reset" class="btn btn-outline-danger"
                                                 value="Clear" onclick="ResetTransaction()" />
                                             <a class="btn btn-outline-secondary mx-1"
-                                                href="/coco/dashboard/instructor/cog">Cancel</a>
+                                                href="/coco-starterkit/dashboard/instructor/cog">Cancel</a>
                                             <button type="submit" name="success" class="btn btn-info">Submit</button>
                                         </div>
                                     </div>
@@ -222,17 +222,17 @@ $view = new view();
     </div>
     </div>
 
-    <script src="/coco/vendor/jquery/dist/jquery.min.js"></script>
-    <script src="/coco/vendor/popper.js/dist/umd/popper.min.js"></script>
-    <script src="/coco/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="/coco/resource/js/app-style-switcher.js"></script>
-    <script src="/coco/resource/js/feather.min.js"></script>
-    <script src="/coco/resource/js/sidebarmenu.js"></script>
-    <script src="/coco/vendor/perfect-scrollbar/dist/perfect-scrollbar.jquery.min.js"></script>
-    <script src="/coco/resource/js/custom.min.js"></script>
-    <script src="/coco/resource/js/app.js"></script>
-    <script src="/coco/resource/js/selectize.js"></script>
-     <script src="/coco/vendor/sweetalert2/dist/sweetalert2.min.js"></script>
+    <script src="/coco-starterkit/vendor/jquery/dist/jquery.min.js"></script>
+    <script src="/coco-starterkit/vendor/popper.js/dist/umd/popper.min.js"></script>
+    <script src="/coco-starterkit/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="/coco-starterkit/resource/js/app-style-switcher.js"></script>
+    <script src="/coco-starterkit/resource/js/feather.min.js"></script>
+    <script src="/coco-starterkit/resource/js/sidebarmenu.js"></script>
+    <script src="/coco-starterkit/vendor/perfect-scrollbar/dist/perfect-scrollbar.jquery.min.js"></script>
+    <script src="/coco-starterkit/resource/js/custom.min.js"></script>
+    <script src="/coco-starterkit/resource/js/app.js"></script>
+    <script src="/coco-starterkit/resource/js/selectize.js"></script>
+     <script src="/coco-starterkit/vendor/sweetalert2/dist/sweetalert2.min.js"></script>
 
 
     <script>

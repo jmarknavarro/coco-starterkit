@@ -112,7 +112,7 @@ $(document).ready(function () {
                         timer: 1500
                     })
                     $.ajax({
-                        url: "/coco/init/controllers/delete_transaction.php",
+                        url: "/coco-starterkit/init/controllers/delete_transaction.php",
                         method: "POST",
                         data: {
                             transId: transId
@@ -151,7 +151,7 @@ $(document).ready(function () {
                         showConfirmButton: false
                     })
                     $.ajax({
-                        url: "/coco/init/controllers/archive_transaction.php",
+                        url: "/coco-starterkit/init/controllers/archive_transaction.php",
                         method: "POST",
                         data: {
                             id: id
@@ -190,7 +190,7 @@ $(document).ready(function () {
                         showConfirmButton: false
                     })
                     $.ajax({
-                        url: "/coco/init/controllers/delete_student.php",
+                        url: "/coco-starterkit/init/controllers/delete_student.php",
                         method: "POST",
                         data: {
                             id: id

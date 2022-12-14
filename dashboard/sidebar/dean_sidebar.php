@@ -4,7 +4,7 @@
                 <nav class="sidebar-nav">
                     <ul id="sidebarnav">
 <!-- 
-                        <li class="sidebar-item "> <a class="sidebar-link " href="/coco/dashboard/dean/"
+                        <li class="sidebar-item "> <a class="sidebar-link " href="/coco-starterkit/dashboard/dean/"
                                 aria-expanded="false"><i data-feather="home" class="feather-icon"></i><span
                                     class="hide-menu">Dashboard</span></a></li>
 
@@ -15,11 +15,11 @@
                                 aria-expanded="false"><i data-feather="file-text" class="feather-icon"></i><span
                                     class="hide-menu">Request List</span></a>
                             <ul aria-expanded="false" class="collapse  first-level base-level-line">
-                                <li class="sidebar-item"><a href="/coco/dashboard/dean/cogp/" class="sidebar-link">
+                                <li class="sidebar-item"><a href="/coco-starterkit/dashboard/dean/cogp/" class="sidebar-link">
                                         <span class="hide-menu">Completion of Grades <br> (Previous Semester)</span>
                                     </a>
                                 </li>
-                                <li class="sidebar-item"><a href="/coco/dashboard/dean/ccg/" class="sidebar-link"><span class="hide-menu">
+                                <li class="sidebar-item"><a href="/coco-starterkit/dashboard/dean/ccg/" class="sidebar-link"><span class="hide-menu">
                                             Change/Correction<br> of Grades
                                         </span></a>
                                 </li>
@@ -29,7 +29,7 @@
 
                         <li class="list-divider"></li>
 
-                        <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="/coco/logout"
+                        <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="/coco-starterkit/logout"
                                 aria-expanded="false"><i data-feather="log-out" class="feather-icon"></i><span
                                     class="hide-menu">Logout</span></a></li>
                     </ul>

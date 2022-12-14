@@ -1,5 +1,5 @@
 <?php
-require_once $_SERVER['DOCUMENT_ROOT'] . '/coco/init/class/core/init.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/coco-starterkit/init/class/core/init.php';
 isLogin();
 $user = new user();
 isInstructor($user->data()->groups);
@@ -14,12 +14,12 @@ $view = new view();
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="icon" type="image/png" sizes="16x16" href="/coco/resource/img/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="/coco-starterkit/resource/img/favicon.ico">
     <title>Dashboard</title>
     <!-- Custom CSS -->
-    <link href="/coco/vendor/c3/c3.min.css" rel="stylesheet">
-    <link href="/coco/vendor/jvector/jquery-jvectormap-2.0.2.css" rel="stylesheet" />
-    <link href="/coco/resource/css/style.min.css" rel="stylesheet">
+    <link href="/coco-starterkit/vendor/c3/c3.min.css" rel="stylesheet">
+    <link href="/coco-starterkit/vendor/jvector/jquery-jvectormap-2.0.2.css" rel="stylesheet" />
+    <link href="/coco-starterkit/resource/css/style.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4/dt-1.12.1/r-2.3.0/sc-2.0.7/sp-2.0.2/datatables.min.css" />
       <!-- Fonts -->
       <link rel="stylesheet" href="https://use.typekit.net/ygc5xtx.css">
@@ -43,10 +43,10 @@ $view = new view();
                         <!-- Logo icon -->
                         <a href="./">
                             <b class="logo-icon">
-                                <img src="/coco/resource/img/logo-icon.png" alt="homepage" class="dark-logo" />
+                                <img src="/coco-starterkit/resource/img/logo-icon.png" alt="homepage" class="dark-logo" />
                             </b>
                             <span class="logo-text">
-                                <img src="/coco/resource/img/logo-text.png" class="dark-logo" alt="homepage" />
+                                <img src="/coco-starterkit/resource/img/logo-text.png" class="dark-logo" alt="homepage" />
                             </span>
                         </a>
                     </div>
@@ -124,10 +124,10 @@ $view = new view();
                                                                                                     echo $user->data()->name;
                                                                                                     ?></a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="/coco/settings/"><i data-feather="settings"
+                                <a class="dropdown-item" href="/coco-starterkit/settings/"><i data-feather="settings"
                                         class="svg-icon mr-2 ml-1"></i>
                                     Account Setting</a>
-                                <a class="dropdown-item" href="/coco/logout"><i data-feather="log-out"
+                                <a class="dropdown-item" href="/coco-starterkit/logout"><i data-feather="log-out"
                                         class="svg-icon mr-2 ml-1"></i>
                                     Logout</a>
                             </div>
@@ -149,27 +149,27 @@ $view = new view();
                                 aria-expanded="false"><i data-feather="file-text" class="feather-icon"></i><span
                                     class="hide-menu">My Request</span></a>
                             <ul aria-expanded="false" class="collapse  first-level base-level-line">
-                                <li class="sidebar-item"><a href="/coco/dashboard/instructor/cog/" class="sidebar-link"><span
+                                <li class="sidebar-item"><a href="/coco-starterkit/dashboard/instructor/cog/" class="sidebar-link"><span
                                             class="hide-menu"> Completion of Grades
                                         </span></a>
                                 </li>
-                                <li class="sidebar-item"><a href="/coco/dashboard/sra/cogp/" class="sidebar-link">
+                                <li class="sidebar-item"><a href="/coco-starterkit/dashboard/sra/cogp/" class="sidebar-link">
                                         <span class="hide-menu">Completion of Grades <br> (Previous Semester)</span>
                                     </a>
                                 </li>
-                                <li class="sidebar-item"><a href="/coco/dashboard/instructor/ccg/" class="sidebar-link"><span class="hide-menu">
+                                <li class="sidebar-item"><a href="/coco-starterkit/dashboard/instructor/ccg/" class="sidebar-link"><span class="hide-menu">
                                             Correction of Grades
                                         </span></a>
                                 </li>
                             </ul>
                         </li>
 
-                        <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="/coco/dashboard/instructor/logs" aria-expanded="false"><i data-feather="bar-chart-2" class="feather-icon"></i><span class="hide-menu">Logs</span></a></li>
+                        <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="/coco-starterkit/dashboard/instructor/logs" aria-expanded="false"><i data-feather="bar-chart-2" class="feather-icon"></i><span class="hide-menu">Logs</span></a></li>
                         <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="#" aria-expanded="false"><i data-feather="message-square" class="feather-icon"></i><span class="hide-menu">Messages</span></a></li>
 
                         <li class="list-divider"></li>
 
-                        <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="/coco/logout" aria-expanded="false"><i data-feather="log-out" class="feather-icon"></i><span class="hide-menu">Logout</span></a></li>
+                        <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="/coco-starterkit/logout" aria-expanded="false"><i data-feather="log-out" class="feather-icon"></i><span class="hide-menu">Logout</span></a></li>
                     </ul>
                 </nav>
             </div>
@@ -233,14 +233,14 @@ $view = new view();
 
 
 
-    <script src="/coco/vendor/jquery/dist/jquery.min.js"></script>
-    <script src="/coco/vendor/popper.js/dist/umd/popper.min.js"></script>
-    <script src="/coco/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="/coco/resource/js/app-style-switcher.js"></script>
-    <script src="/coco/resource/js/feather.min.js"></script>
-    <script src="/coco/resource/js/sidebarmenu.js"></script>
-    <script src="/coco/vendor/perfect-scrollbar/dist/perfect-scrollbar.jquery.min.js"></script>
-    <script src="/coco/resource/js/custom.min.js"></script>
+    <script src="/coco-starterkit/vendor/jquery/dist/jquery.min.js"></script>
+    <script src="/coco-starterkit/vendor/popper.js/dist/umd/popper.min.js"></script>
+    <script src="/coco-starterkit/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="/coco-starterkit/resource/js/app-style-switcher.js"></script>
+    <script src="/coco-starterkit/resource/js/feather.min.js"></script>
+    <script src="/coco-starterkit/resource/js/sidebarmenu.js"></script>
+    <script src="/coco-starterkit/vendor/perfect-scrollbar/dist/perfect-scrollbar.jquery.min.js"></script>
+    <script src="/coco-starterkit/resource/js/custom.min.js"></script>
     <script type="text/javascript" src="https://cdn.datatables.net/v/bs4/dt-1.12.1/r-2.3.0/sc-2.0.7/sp-2.0.2/datatables.min.js"></script>
     </script>
     <script>

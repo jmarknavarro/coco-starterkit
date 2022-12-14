@@ -1,5 +1,5 @@
 <?php
-require_once $_SERVER['DOCUMENT_ROOT'] . '/coco/init/class/core/init.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/coco-starterkit/init/class/core/init.php';
 isLogin();
 $user = new user();
 isSRA($user->data()->groups);
@@ -17,12 +17,12 @@ $clcode = $_GET['classcode'];
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="icon" type="image/png" sizes="16x16" href="/coco/resource/img/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="/coco-starterkit/resource/img/favicon.ico">
     <title>Faculty Report on Completion Grades Within the Semester</title>
     <!-- Custom CSS -->
-    <link href="/coco/vendor/c3/c3.min.css" rel="stylesheet">
-    <link href="/coco/vendor/jvector/jquery-jvectormap-2.0.2.css" rel="stylesheet" />
-    <link href="/coco/resource/css/style.min.css" rel="stylesheet">
+    <link href="/coco-starterkit/vendor/c3/c3.min.css" rel="stylesheet">
+    <link href="/coco-starterkit/vendor/jvector/jquery-jvectormap-2.0.2.css" rel="stylesheet" />
+    <link href="/coco-starterkit/resource/css/style.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css"
         href="https://cdn.datatables.net/v/bs4/dt-1.13.1/b-2.3.3/b-colvis-2.3.3/cr-1.6.1/fc-4.2.1/fh-3.3.1/kt-2.8.0/r-2.4.0/rg-1.3.0/rr-1.3.1/sc-2.0.7/sp-2.1.0/sr-1.2.0/datatables.min.css" />
     <!-- Fonts -->
@@ -50,7 +50,7 @@ $clcode = $_GET['classcode'];
                 <nav class="sidebar-nav">
                     <ul id="sidebarnav">
 
-                        <li class="sidebar-item "> <a class="sidebar-link " href="/coco/dashboard/sra/"
+                        <li class="sidebar-item "> <a class="sidebar-link " href="/coco-starterkit/dashboard/sra/"
                                 aria-expanded="false"><i data-feather="home" class="feather-icon"></i><span
                                     class="hide-menu">Dashboard</span></a></li>
 
@@ -61,16 +61,16 @@ $clcode = $_GET['classcode'];
                                     data-feather="file-text" class="feather-icon"></i><span class="hide-menu">Request
                                     List</span></a>
                             <ul aria-expanded="false" class="collapse  first-level base-level-line ">
-                                <li class="sidebar-item "><a href="/coco/dashboard/sra/cog/" class="sidebar-link "><span
+                                <li class="sidebar-item "><a href="/coco-starterkit/dashboard/sra/cog/" class="sidebar-link "><span
                                             class="hide-menu">
                                             Completion Grades <br> Within the Semester
                                         </span></a>
                                 </li>
-                                <li class="sidebar-item "><a href="/coco/dashboard/sra/cogp/" class="sidebar-link ">
+                                <li class="sidebar-item "><a href="/coco-starterkit/dashboard/sra/cogp/" class="sidebar-link ">
                                         <span class="hide-menu">Completion of Grades <br> (Previous Semester)</span>
                                     </a>
                                 </li>
-                                <li class="sidebar-item"><a href="/coco/dashboard/sra/ccg/" class="sidebar-link"><span
+                                <li class="sidebar-item"><a href="/coco-starterkit/dashboard/sra/ccg/" class="sidebar-link"><span
                                             class="hide-menu">
                                             Change/Correction<br> of Grades
                                         </span></a>
@@ -83,18 +83,18 @@ $clcode = $_GET['classcode'];
                                 aria-expanded="false"><i data-feather="bar-chart-2" class="feather-icon"></i><span
                                     class="hide-menu">Reports</span></a>
                             <ul aria-expanded="false" class="collapse  first-level base-level-line in">
-                                <li class="sidebar-item "><a href="/coco/dashboard/sra/reports/cog/"
+                                <li class="sidebar-item "><a href="/coco-starterkit/dashboard/sra/reports/cog/"
                                         class="sidebar-link "><span class="hide-menu">
                                             Completion Grades <br> Within the Semester
                                         </span></a>
                                 </li>
 
-                                <li class="sidebar-item active"><a href="/coco/dashboard/sra/reports/cogp/"
+                                <li class="sidebar-item active"><a href="/coco-starterkit/dashboard/sra/reports/cogp/"
                                         class="sidebar-link active">
                                         <span class="hide-menu">Completion of Grades <br> (Previous Semester)</span>
                                     </a>
                                 </li>
-                                <li class="sidebar-item"><a href="/coco/dashboard/sra/reports/ccg/"
+                                <li class="sidebar-item"><a href="/coco-starterkit/dashboard/sra/reports/ccg/"
                                         class="sidebar-link"><span class="hide-menu">
                                             Change/Correction<br> of Grades
                                         </span></a>
@@ -106,7 +106,7 @@ $clcode = $_GET['classcode'];
 
                         <li class="list-divider"></li>
 
-                        <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="/coco/logout"
+                        <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="/coco-starterkit/logout"
                                 aria-expanded="false"><i data-feather="log-out" class="feather-icon"></i><span
                                     class="hide-menu">Logout</span></a></li>
                     </ul>
@@ -125,7 +125,7 @@ $clcode = $_GET['classcode'];
                         <div class="d-flex align-items-center">
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb m-0 p-0">
-                                    <li class="breadcrumb-item"><a href="/coco/dashboard/sra/reports/cogp/"
+                                    <li class="breadcrumb-item"><a href="/coco-starterkit/dashboard/sra/reports/cogp/"
                                             class="text-muted">Transaction List</a>
                                     </li>
                                     <li class="breadcrumb-item text-muted active" aria-current="page">Student List</li>
@@ -164,19 +164,19 @@ $clcode = $_GET['classcode'];
         </div>
     </div>
     </div>
-    <script src="/coco/vendor/jquery/dist/jquery.min.js"></script>
-    <script src="/coco/vendor/popper.js/dist/umd/popper.min.js"></script>
-    <script src="/coco/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="/coco/resource/js/app-style-switcher.js"></script>
-    <script src="/coco/resource/js/feather.min.js"></script>
-    <script src="/coco/resource/js/sidebarmenu.js"></script>
-    <script src="/coco/vendor/perfect-scrollbar/dist/perfect-scrollbar.jquery.min.js"></script>
-    <script src="/coco/resource/js/custom.min.js"></script>
-    <script src="/coco/resource/js/app.js"></script>
+    <script src="/coco-starterkit/vendor/jquery/dist/jquery.min.js"></script>
+    <script src="/coco-starterkit/vendor/popper.js/dist/umd/popper.min.js"></script>
+    <script src="/coco-starterkit/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="/coco-starterkit/resource/js/app-style-switcher.js"></script>
+    <script src="/coco-starterkit/resource/js/feather.min.js"></script>
+    <script src="/coco-starterkit/resource/js/sidebarmenu.js"></script>
+    <script src="/coco-starterkit/vendor/perfect-scrollbar/dist/perfect-scrollbar.jquery.min.js"></script>
+    <script src="/coco-starterkit/resource/js/custom.min.js"></script>
+    <script src="/coco-starterkit/resource/js/app.js"></script>
     <script type="text/javascript"
         src="https://cdn.datatables.net/v/bs4/dt-1.13.1/b-2.3.3/b-colvis-2.3.3/cr-1.6.1/fc-4.2.1/fh-3.3.1/kt-2.8.0/r-2.4.0/rg-1.3.0/rr-1.3.1/sc-2.0.7/sp-2.1.0/sr-1.2.0/datatables.min.js">
     </script>
-    <script src="/coco/vendor/sweetalert2/dist/sweetalert2.min.js"></script>
+    <script src="/coco-starterkit/vendor/sweetalert2/dist/sweetalert2.min.js"></script>
     </script>
 </body>
 

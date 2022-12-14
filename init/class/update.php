@@ -1,6 +1,6 @@
 <?php
-require_once $_SERVER['DOCUMENT_ROOT'].'/coco/vendor/sendmail.php';
-require_once $_SERVER['DOCUMENT_ROOT'].'/coco/init/class/core/init.php';
+require_once $_SERVER['DOCUMENT_ROOT'].'/coco-starterkit/vendor/sendmail.php';
+require_once $_SERVER['DOCUMENT_ROOT'].'/coco-starterkit/init/class/core/init.php';
 require_once 'config.php';
 
 class update extends config

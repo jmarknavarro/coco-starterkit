@@ -1,5 +1,5 @@
 <?php
-require_once $_SERVER['DOCUMENT_ROOT'].'/coco/vendor/sendmail.php';
+require_once $_SERVER['DOCUMENT_ROOT'].'/coco-starterkit/vendor/sendmail.php';
 
 function CheckSuccess($status)
 {
@@ -188,22 +188,22 @@ function logd()
                 $login = $user->login(input::get('username'), input::get('password'), $remember);
                 if ($login) {
                     if ($user->data()->groups == 1) {
-                        Redirect::to('/coco/admin/');
+                        Redirect::to('/coco-starterkit/admin/');
                         echo $user->data()->groups;
                     } elseif ($user->data()->groups == 2) {
-                        Redirect::to('/coco/dashboard/vp/ccg');
+                        Redirect::to('/coco-starterkit/dashboard/vp/ccg');
                         echo $user->data()->groups;
                     } elseif ($user->data()->groups == 3) {
-                        Redirect::to('/coco/dashboard/dean/cogp');
+                        Redirect::to('/coco-starterkit/dashboard/dean/cogp');
                         echo $user->data()->groups;
                     } elseif ($user->data()->groups == 4) {
-                        Redirect::to('/coco/dashboard/registrar/cog');
+                        Redirect::to('/coco-starterkit/dashboard/registrar/cog');
                         echo $user->data()->groups;
                     } elseif ($user->data()->groups == 5) {
-                        Redirect::to('/coco/dashboard/sra/cog');
+                        Redirect::to('/coco-starterkit/dashboard/sra/cog');
                         echo $user->data()->groups;
                     } elseif ($user->data()->groups == 6) {
-                        Redirect::to('/coco/dashboard/instructor/');
+                        Redirect::to('/coco-starterkit/dashboard/instructor/');
                         echo $user->data()->groups;
                     } else {
                         Redirect::to('./home');
@@ -226,7 +226,7 @@ function isLogin()
 {
     $user = new user();
     if (!$user->isLoggedIn()) {
-        Redirect::to('/coco/login');
+        Redirect::to('/coco-starterkit/login');
     }
 }
 
@@ -236,17 +236,17 @@ function auth()
     $login = $user->isLoggedIn();
     if ($login) {
         if ($user->data()->groups == 1) {
-            Redirect::to('/coco/admin/');
+            Redirect::to('/coco-starterkit/admin/');
         } elseif ($user->data()->groups == 2) {
-            Redirect::to('/coco/dashboard/vp/cogp');
+            Redirect::to('/coco-starterkit/dashboard/vp/cogp');
         } elseif ($user->data()->groups == 3) {
-            Redirect::to('/coco/dashboard/dean/cogp');
+            Redirect::to('/coco-starterkit/dashboard/dean/cogp');
         } elseif ($user->data()->groups == 4) {
-            Redirect::to('/coco/dashboard/registrar/cog');
+            Redirect::to('/coco-starterkit/dashboard/registrar/cog');
         } elseif ($user->data()->groups == 5) {
-            Redirect::to('/coco/dashboard/sra/cog');
+            Redirect::to('/coco-starterkit/dashboard/sra/cog');
         } elseif ($user->data()->groups == 6) {
-            Redirect::to('/coco/dashboard/instructor/');
+            Redirect::to('/coco-starterkit/dashboard/instructor/');
         }
     }
 }
@@ -337,7 +337,7 @@ function profilePic()
     if ($view->getdpUser() !== null || $view->getdpUser() !== null) {
         echo "'data:" . $view->getMmUser() . ";base64," . base64_encode($view->getdpUser()) . "'";
     } else {
-        echo "'/coco/resource/img/user.jpg'";
+        echo "'/coco-starterkit/resource/img/user.jpg'";
     }
 }
 
@@ -348,7 +348,7 @@ function UserSignature()
         echo "<img src='../upload/signature/". $view->getSignatureUser()."'";
         echo 'alt="image" height="120px">';
     } else {
-        echo '<img src="/coco/resource/img/em.png"';
+        echo '<img src="/coco-starterkit/resource/img/em.png"';
         echo 'alt="image" height="120px">';
     }
 }

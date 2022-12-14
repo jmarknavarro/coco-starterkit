@@ -76,8 +76,8 @@
     </div>
 </div>
 </div>
-<script src="/coco/vendor/jquery/dist/jquery.min.js"></script>
-<script src="/coco/resource/js/selectize.js"></script>
+<script src="/coco-starterkit/vendor/jquery/dist/jquery.min.js"></script>
+<script src="/coco-starterkit/resource/js/selectize.js"></script>
 <script>
 var $semester = $('#edit_semester').selectize();
 var $college = $('#edit_college').selectize();
@@ -97,7 +97,7 @@ $(document).ready(function() {
             console.log(id);
             $.ajax({
                 type: 'POST',
-                url: '/coco/init/controllers/transaction_row.php',
+                url: '/coco-starterkit/init/controllers/transaction_row.php',
                 data: {
                     id: id
                 },
@@ -135,7 +135,7 @@ $("#cog-form").submit(function(e) {
 
         $.ajax({
             type: 'POST',
-            url: '/coco/init/controllers/edit_transaction.php',
+            url: '/coco-starterkit/init/controllers/edit_transaction.php',
             data: {
                 transaction_id: a,
                 class_code: b,

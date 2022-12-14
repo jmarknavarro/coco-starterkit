@@ -1,6 +1,6 @@
 <?php
-require_once $_SERVER['DOCUMENT_ROOT'] . '/coco/init/class/core/init.php';
-require_once $_SERVER['DOCUMENT_ROOT'] . '/coco/init/class/config.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/coco-starterkit/init/class/core/init.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/coco-starterkit/init/class/config.php';
 $user = new user();
 
 if (isset($_POST['signed'])) {

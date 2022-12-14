@@ -4,10 +4,10 @@ header('Content-type: application/pdf');
 use setasign\Fpdi\Fpdi;
 use setasign\Fdpi\PdfReader;
 
-require_once $_SERVER['DOCUMENT_ROOT'].'/coco/init/class/config.php';
-require_once $_SERVER['DOCUMENT_ROOT'].'/coco/vendor/pdfprototype/fpdf.php';
-require_once $_SERVER['DOCUMENT_ROOT'].'/coco/vendor/pdfprototype/fpdi/src/autoload.php';
-require_once $_SERVER['DOCUMENT_ROOT'].'/coco/init/class/crypto.php';
+require_once $_SERVER['DOCUMENT_ROOT'].'/coco-starterkit/init/class/config.php';
+require_once $_SERVER['DOCUMENT_ROOT'].'/coco-starterkit/vendor/pdfprototype/fpdf.php';
+require_once $_SERVER['DOCUMENT_ROOT'].'/coco-starterkit/vendor/pdfprototype/fpdi/src/autoload.php';
+require_once $_SERVER['DOCUMENT_ROOT'].'/coco-starterkit/init/class/crypto.php';
 
 $transId = crypto::decrypt($_GET['d'],"_johnmarknavarro");
 $config = new config;

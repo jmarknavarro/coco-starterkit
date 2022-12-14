@@ -75,7 +75,7 @@
         </div>
     </div>
 </div>
-<script src="/coco/vendor/jquery/dist/jquery.min.js"></script>
+<script src="/coco-starterkit/vendor/jquery/dist/jquery.min.js"></script>
 <script>
 if (window.history.replaceState) {
     window.history.replaceState(null, null, window.location.href);
@@ -92,7 +92,7 @@ $(document).ready(function() {
             var id = $(this).data("id");
             $.ajax({
                 type: 'POST',
-                url: '/coco/init/controllers/transaction_row.php',
+                url: '/coco-starterkit/init/controllers/transaction_row.php',
                 data: {
                     id: id
                 },
@@ -105,7 +105,7 @@ $(document).ready(function() {
                     $('#school_year3').text(response.school_year);
                     $.ajax({
                         type: 'POST',
-                        url: '/coco/init/controllers/instructor/ccg/status_tracker.php',
+                        url: '/coco-starterkit/init/controllers/instructor/ccg/status_tracker.php',
                         data: {
                             'action': document.getElementById('transaction_id3')
                                 .innerHTML

@@ -1,5 +1,5 @@
 <?php
-require_once $_SERVER['DOCUMENT_ROOT'] . '/coco/init/class/core/init.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/coco-starterkit/init/class/core/init.php';
 isLogin();
 $user = new user();
 isInstructor($user->data()->groups);
@@ -17,12 +17,12 @@ $clcode = $_GET['classcode'];
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="icon" type="image/png" sizes="16x16" href="/coco/resource/img/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="/coco-starterkit/resource/img/favicon.ico">
     <title>Faculty Report on Completion of Grades (Previous Semester)</title>
     <!-- Custom CSS -->
-    <link href="/coco/vendor/c3/c3.min.css" rel="stylesheet">
-    <link href="/coco/vendor/jvector/jquery-jvectormap-2.0.2.css" rel="stylesheet" />
-    <link href="/coco/resource/css/style.min.css" rel="stylesheet">
+    <link href="/coco-starterkit/vendor/c3/c3.min.css" rel="stylesheet">
+    <link href="/coco-starterkit/vendor/jvector/jquery-jvectormap-2.0.2.css" rel="stylesheet" />
+    <link href="/coco-starterkit/resource/css/style.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css"
         href="https://cdn.datatables.net/v/bs4/dt-1.13.1/b-2.3.3/b-colvis-2.3.3/cr-1.6.1/fc-4.2.1/fh-3.3.1/kt-2.8.0/r-2.4.0/rg-1.3.0/rr-1.3.1/sc-2.0.7/sp-2.1.0/sr-1.2.0/datatables.min.css" />
     <!-- Fonts -->
@@ -49,10 +49,10 @@ $clcode = $_GET['classcode'];
                         <!-- Logo icon -->
                         <a href="./cog">
                             <b class="logo-icon">
-                                <img src="/coco/resource/img/logo-icon.png" alt="homepage" class="dark-logo" />
+                                <img src="/coco-starterkit/resource/img/logo-icon.png" alt="homepage" class="dark-logo" />
                             </b>
                             <span class="logo-text">
-                                <img src="/coco/resource/img/logo-text.png" class="dark-logo" alt="homepage" />
+                                <img src="/coco-starterkit/resource/img/logo-text.png" class="dark-logo" alt="homepage" />
                             </span>
                         </a>
                     </div>
@@ -141,10 +141,10 @@ $clcode = $_GET['classcode'];
                                                                                                     echo $user->data()->name;
                                                                                                     ?></a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="/coco/settings/"><i data-feather="settings"
+                                <a class="dropdown-item" href="/coco-starterkit/settings/"><i data-feather="settings"
                                         class="svg-icon mr-2 ml-1"></i>
                                     Account Setting</a>
-                                <a class="dropdown-item" href="/coco/logout"><i data-feather="log-out"
+                                <a class="dropdown-item" href="/coco-starterkit/logout"><i data-feather="log-out"
                                         class="svg-icon mr-2 ml-1"></i>
                                     Logout</a>
                             </div>
@@ -159,7 +159,7 @@ $clcode = $_GET['classcode'];
                 <nav class="sidebar-nav">
                     <ul id="sidebarnav">
 
-                        <li class="sidebar-item"> <a class="sidebar-link " href="/coco/dashboard/instructor/"
+                        <li class="sidebar-item"> <a class="sidebar-link " href="/coco-starterkit/dashboard/instructor/"
                                 aria-expanded="false"><i data-feather="home" class="feather-icon"></i><span
                                     class="hide-menu">Dashboard</span></a></li>
 
@@ -170,17 +170,17 @@ $clcode = $_GET['classcode'];
                                 aria-expanded="false"><i data-feather="file-text" class="feather-icon"></i><span
                                     class="hide-menu">My Request</span></a>
                             <ul aria-expanded="false" class="collapse  first-level base-level-line in">
-                                <li class="sidebar-item "><a href="/coco/dashboard/instructor/cog/"
+                                <li class="sidebar-item "><a href="/coco-starterkit/dashboard/instructor/cog/"
                                         class="sidebar-link "><span class="hide-menu">
                                             Completion Grades <br> Within the Semester
                                         </span></a>
                                 </li>
-                                <li class="sidebar-item active"><a href="/coco/dashboard/instructor/cogp/"
+                                <li class="sidebar-item active"><a href="/coco-starterkit/dashboard/instructor/cogp/"
                                         class="sidebar-link active">
                                         <span class="hide-menu">Completion of Grades <br> (Previous Semester)</span>
                                     </a>
                                 </li>
-                                <li class="sidebar-item"><a href="/coco/dashboard/instructor/ccg/"
+                                <li class="sidebar-item"><a href="/coco-starterkit/dashboard/instructor/ccg/"
                                         class="sidebar-link"><span class="hide-menu">
                                             Change/Correction<br> of Grades
                                         </span></a>
@@ -189,12 +189,12 @@ $clcode = $_GET['classcode'];
                         </li>
 
                         <li class="sidebar-item"> <a class="sidebar-link sidebar-link"
-                                href="/coco/dashboard/instructor/logs" aria-expanded="false"><i
+                                href="/coco-starterkit/dashboard/instructor/logs" aria-expanded="false"><i
                                     data-feather="bar-chart-2" class="feather-icon"></i><span
                                     class="hide-menu">Logs</span></a></li>
                         <li class="list-divider"></li>
 
-                        <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="/coco/logout"
+                        <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="/coco-starterkit/logout"
                                 aria-expanded="false"><i data-feather="log-out" class="feather-icon"></i><span
                                     class="hide-menu">Logout</span></a></li>
                     </ul>
@@ -212,7 +212,7 @@ $clcode = $_GET['classcode'];
                         <div class="d-flex align-items-center">
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb m-0 p-0">
-                                    <li class="breadcrumb-item"><a href="/coco/dashboard/instructor/cogp/"
+                                    <li class="breadcrumb-item"><a href="/coco-starterkit/dashboard/instructor/cogp/"
                                             class="text-muted">Transaction List</a>
                                     </li>
                                     <li class="breadcrumb-item text-muted active" aria-current="page">Student List</li>
@@ -266,17 +266,17 @@ echo ' <a class="btn btn-info btn-sm1" href="add-student?id='.$id.'&classcode='.
 
 
 
-    <script src="/coco/vendor/jquery/dist/jquery.min.js"></script>
-    <script src="/coco/vendor/popper.js/dist/umd/popper.min.js"></script>
-    <script src="/coco/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="/coco/resource/js/app-style-switcher.js"></script>
-    <script src="/coco/resource/js/feather.min.js"></script>
-    <script src="/coco/resource/js/sidebarmenu.js"></script>
-    <script src="/coco/vendor/perfect-scrollbar/dist/perfect-scrollbar.jquery.min.js"></script>
-    <script src="/coco/resource/js/custom.min.js"></script>
-    <script src="/coco/resource/js/app.js"></script>
+    <script src="/coco-starterkit/vendor/jquery/dist/jquery.min.js"></script>
+    <script src="/coco-starterkit/vendor/popper.js/dist/umd/popper.min.js"></script>
+    <script src="/coco-starterkit/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="/coco-starterkit/resource/js/app-style-switcher.js"></script>
+    <script src="/coco-starterkit/resource/js/feather.min.js"></script>
+    <script src="/coco-starterkit/resource/js/sidebarmenu.js"></script>
+    <script src="/coco-starterkit/vendor/perfect-scrollbar/dist/perfect-scrollbar.jquery.min.js"></script>
+    <script src="/coco-starterkit/resource/js/custom.min.js"></script>
+    <script src="/coco-starterkit/resource/js/app.js"></script>
      <script type="text/javascript" src="https://cdn.datatables.net/v/bs4/dt-1.13.1/b-2.3.3/b-colvis-2.3.3/cr-1.6.1/fc-4.2.1/fh-3.3.1/kt-2.8.0/r-2.4.0/rg-1.3.0/rr-1.3.1/sc-2.0.7/sp-2.1.0/sr-1.2.0/datatables.min.js"></script>
-     <script src="/coco/vendor/sweetalert2/dist/sweetalert2.min.js"></script>
+     <script src="/coco-starterkit/vendor/sweetalert2/dist/sweetalert2.min.js"></script>
     </script>
 </body>
 
