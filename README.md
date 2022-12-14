@@ -11,3 +11,16 @@ Correction and Completion of Grade portal "CoCo" is the portal used by the Centr
 - Approval System
 - Downloadable PDF
 
+## Plugins
+
+Bootstrap 4
+SweetAlert2
+PHPMailer
+PDFPrototype
+Selectize
+CroppieJS
+AnimateJS
+Feather Icon
+DataTables
+JQuery UI Signature
+
